@@ -1,0 +1,2 @@
+# SeiyuuPicsBot
+Twitter Bot
