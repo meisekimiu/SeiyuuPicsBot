@@ -17,12 +17,18 @@ describe Tweetbot do
     end
   end
 
-  describe "#authkeys" do
+  describe '#authkeys' do
     it 'should return all the authorization keys in one object' do
       expect(@bot.authkeys.consumer.key).to eq "CONSUMER_KEY_TEST123"
       expect(@bot.authkeys.consumer.secret).to eq "CONSUMER_SECRET_TEST123"
       expect(@bot.authkeys.access.key).to eq "ACCESS_KEY_123"
       expect(@bot.authkeys.access.secret).to eq "ACCESS_SECRET_123"
+    end
+  end
+
+  describe '#directory' do
+    it 'should get the full image directory' do
+      expect(@bot.directory).to eq (File.expand_path(File.dirname(__FILE__))+"/testbot_imgs")
     end
   end
 end

@@ -4,7 +4,16 @@ class Tweetbot
     if File.file?(path)
       bot_data = JSON.parse(File.read(path), object_class: OpenStruct)
       @name = bot_data.name
+      setup_directory(bot_data, path)
       setup_authkeys(bot_data)
+    end
+  end
+
+  def setup_directory(bot_data, path)
+    if Dir.exists?(bot_data.image_directory)
+      @directory = bot_data.image_directory
+    else
+      @directory = File.expand_path(File.dirname(path)+'/'+bot_data.image_directory)
     end
   end
 
@@ -24,5 +33,9 @@ class Tweetbot
 
   def authkeys
     @authkeys
+  end
+
+  def directory
+    @directory
   end
 end
