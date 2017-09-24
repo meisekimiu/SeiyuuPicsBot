@@ -1,5 +1,4 @@
 /images/*
-!/images/backlog.log
 
 .idea
 .rspec
