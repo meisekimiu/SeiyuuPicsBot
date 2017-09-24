@@ -1,0 +1,11 @@
+{
+  "name": "SeiyuuPicsBot",
+  "consumer_key": "CONSUMER KEY HERE",
+  "consumer_secret": "CONSUMER SECRET HERE",
+  "access_key": "ACCESS KEY HERE",
+  "access_secret": "ACCESS SECRET HERE",
+  "image_directory": "images",
+  "statuses": {
+    "default": "Check out this image"
+  }
+}
