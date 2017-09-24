@@ -1,4 +1,5 @@
 require 'json'
+require_relative 'ImageSelector'
 class Tweetbot
   def initialize(path)
     if File.file?(path)
@@ -6,6 +7,7 @@ class Tweetbot
       @name = bot_data.name
       setup_directory(bot_data, path)
       setup_authkeys(bot_data)
+	  @selector = ImageSelector.new(@directory,bot_data.statuses.to_h)
     end
   end
 
@@ -37,5 +39,9 @@ class Tweetbot
 
   def directory
     @directory
+  end
+
+  def getTweet
+	@selector.getTweet
   end
 end

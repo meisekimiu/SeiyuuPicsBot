@@ -4,7 +4,7 @@ class ImageSelector
 	@directory = directory
 	setup_backlog
 	@file_list = (Dir.entries(@directory) - ['.', '..', 'backlog.log'])
-	@status_data = statusdata
+	@status_data = Hash[statusdata.map{ |k, v| [k.to_s, v] }] #Stringifies any keys in the hash
   end
 
   def setup_backlog

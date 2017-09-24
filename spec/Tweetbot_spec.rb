@@ -31,4 +31,12 @@ describe Tweetbot do
       expect(@bot.directory).to eq (File.expand_path(File.dirname(__FILE__))+'/testbot_imgs')
     end
   end
+
+  describe '#getTweet' do
+	it 'should get a tweet with proper configuration' do
+	  arr = [@bot.getTweet,@bot.getTweet]
+	  expect(arr.collect {|tweet| tweet.status}).to include('Relax!')
+	  expect(arr.collect {|tweet| tweet.status}).to include('RELAX RELAX!')
+	end
+  end
 end
