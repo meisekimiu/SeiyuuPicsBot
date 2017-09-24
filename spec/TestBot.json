@@ -1,3 +1,12 @@
 {
-  "name": "TestBot"
+  "name": "TestBot",
+  "consumer_key": "CONSUMER_KEY_TEST123",
+  "consumer_secret": "CONSUMER_SECRET_TEST123",
+  "access_key": "ACCESS_KEY_123",
+  "access_secret": "ACCESS_SECRET_123",
+  "image_directory": "testbot_imgs",
+  "statuses": {
+    "default": "Relax!",
+    "leona_relax_2.png": "RELAX RELAX!"
+  }
 }

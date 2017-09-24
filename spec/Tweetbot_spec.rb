@@ -16,4 +16,13 @@ describe Tweetbot do
       expect(@bot.name).to eq "TestBot"
     end
   end
+
+  describe "#authkeys" do
+    it 'should return all the authorization keys in one object' do
+      expect(@bot.authkeys.consumer.key).to eq "CONSUMER_KEY_TEST123"
+      expect(@bot.authkeys.consumer.secret).to eq "CONSUMER_SECRET_TEST123"
+      expect(@bot.authkeys.access.key).to eq "ACCESS_KEY_123"
+      expect(@bot.authkeys.access.secret).to eq "ACCESS_SECRET_123"
+    end
+  end
 end
