@@ -1,8 +1,13 @@
 class ImageSelector
   def initialize(directory,statusdata)
 	@directory = directory
-	@backlog = File.readlines(directory+"/backlog.log")
+	setup_backlog
 	@file_list = (Dir.entries(@directory) - ['.', '..', 'backlog.log'])
+  end
+
+  def setup_backlog
+	File.write(@directory+"/backlog.log", "") unless File.exists?(@directory+"/backlog.log")
+	@backlog = File.readlines(@directory+"/backlog.log")
   end
 
   def select
