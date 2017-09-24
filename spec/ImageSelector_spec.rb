@@ -37,4 +37,12 @@ describe ImageSelector do
 	  expect(@img.backlog).to include("not_a_real_file.png")
 	end
   end
+
+  describe '#getTweet' do
+	it "gets data for a Tweet" do
+	  arr = [@img.getTweet,@img.getTweet]
+	  expect(arr.collect {|tweet| tweet.status}).to include("Relax!")
+	  expect(arr.collect {|tweet| tweet.status}).to include("RELAX RELAX!")
+	end
+  end
 end

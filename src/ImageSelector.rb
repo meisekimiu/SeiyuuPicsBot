@@ -1,8 +1,10 @@
+require_relative 'Tweet'
 class ImageSelector
   def initialize(directory,statusdata)
 	@directory = directory
 	setup_backlog
 	@file_list = (Dir.entries(@directory) - ['.', '..', 'backlog.log'])
+	@status_data = statusdata
   end
 
   def setup_backlog
@@ -26,5 +28,20 @@ class ImageSelector
 
   def backlog
 	@backlog
+  end
+
+  def getTweet
+	file = select
+	status = getStatus(file)
+	Tweet.new(status,file)
+  end
+
+  def getStatus(file)
+	if @status_data.has_key?(file)
+	  return @status_data[file]
+	elsif @status_data.has_key?("default")
+	  return @status_data["default"]
+	end
+	""
   end
 end
