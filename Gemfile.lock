@@ -19,6 +19,7 @@ GEM
       domain_name (~> 0.5)
     http-form_data (1.0.3)
     http_parser.rb (0.6.0)
+    json (2.0.2)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
     multipart-post (2.0.0)
@@ -57,6 +58,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  json
   rspec
   twitter
 
