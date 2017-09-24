@@ -44,4 +44,8 @@ class Tweetbot
   def getTweet
 	@selector.getTweet
   end
+
+  def getBacklogOutput
+	@selector.backlog.join('\n')
+  end
 end

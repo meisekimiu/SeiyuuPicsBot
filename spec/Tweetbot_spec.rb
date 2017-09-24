@@ -39,4 +39,11 @@ describe Tweetbot do
 	  expect(arr.collect {|tweet| tweet.status}).to include('RELAX RELAX!')
 	end
   end
+
+  describe '#getBacklogOutput' do
+	it 'should get output for backlog file' do
+	  @bot.getTweet
+	  expect(@bot.getBacklogOutput.split('\n').length).to eq 1
+	end
+  end
 end
