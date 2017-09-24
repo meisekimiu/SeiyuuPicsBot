@@ -8,8 +8,8 @@ class ImageSelector
   end
 
   def setup_backlog
-	File.write(@directory+"/backlog.log", "") unless File.exists?(@directory+"/backlog.log")
-	@backlog = File.readlines(@directory+"/backlog.log")
+	File.write(@directory+'/backlog.log', '') unless File.exists?(@directory+'/backlog.log')
+	@backlog = File.readlines(@directory+'/backlog.log')
   end
 
   def select
@@ -39,9 +39,9 @@ class ImageSelector
   def getStatus(file)
 	if @status_data.has_key?(file)
 	  return @status_data[file]
-	elsif @status_data.has_key?("default")
-	  return @status_data["default"]
+	elsif @status_data.has_key?('default')
+	  return @status_data['default']
 	end
-	""
+	''
   end
 end
