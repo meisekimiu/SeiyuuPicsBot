@@ -3,6 +3,7 @@ class Parameter
 	@symbol = nil
 	@required = false
 	@value = false
+	@description = ""
   end
 
   def setSymbol(symbol)
@@ -31,5 +32,13 @@ class Parameter
 
   def getValue
 	@value
+  end
+
+  def setDescription(desc)
+	@description = desc
+  end
+
+  def getDescription
+	@description
   end
 end

@@ -35,4 +35,12 @@ describe Parameter do
 	  expect(@param.getValue).to be true
 	end
   end
+
+  describe '#getDescription #setDescription' do
+	it 'can have a textual description be set and get' do
+	  expect(@param.getDescription).to eq ''
+	  @param.setDescription('displays usage information')
+	  expect(@param.getDescription).to eq 'displays usage information'
+	end
+  end
 end
