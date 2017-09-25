@@ -47,4 +47,11 @@ describe ParameterParser do
 	  expect(state.valid).to be true
 	end
   end
+
+  describe '#getParameters' do
+	it 'should get parameters' do
+	  @parser.add(@flag)
+	  expect(@parser.getParameters).to include(@flag)
+	end
+  end
 end

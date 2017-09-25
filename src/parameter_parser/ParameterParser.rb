@@ -34,4 +34,8 @@ class ParameterParser
 	state.valid = false if param.isRequired and !param.getValue
 	state[param.getSymbol] = param.getValue
   end
+
+  def getParameters
+	@parameters
+  end
 end
