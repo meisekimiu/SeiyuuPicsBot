@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative '../src/ImageSelector'
+require_relative '../src/tweetbot/ImageSelector'
 describe ImageSelector do
   before :each do
     @img = ImageSelector.new(File.expand_path(File.dirname(__FILE__))+'/testbot_imgs',

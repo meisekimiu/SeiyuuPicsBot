@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative '../src/Tweet'
+require_relative '../src/tweetbot/Tweet'
 describe Tweet do
   before :each do
 	@tweet = Tweet.new('Relax!',File.expand_path(File.dirname(__FILE__))+'/testbot_imgs/leona_relax.png')

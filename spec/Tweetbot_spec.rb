@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative '../src/Tweetbot'
+require_relative '../src/tweetbot/Tweetbot'
 describe Tweetbot do
   before :each do
     @bot = Tweetbot.new (File.expand_path(File.dirname(__FILE__))+'/TestBot.json')
