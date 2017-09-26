@@ -33,7 +33,7 @@ class ImageSelector
   def getTweet
 	file = select
 	status = getStatus(file)
-	Tweet.new(status,file)
+	Tweet.new(status,@directory+'/'+file)
   end
 
   def getStatus(file)
