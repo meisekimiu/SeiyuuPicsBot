@@ -10,6 +10,9 @@ class ImageSelector
   def setup_backlog
 	File.write(@directory+'/backlog.log', '') unless File.exists?(@directory+'/backlog.log')
 	@backlog = File.readlines(@directory+'/backlog.log')
+	@backlog.collect! do |file|
+		file.chomp
+	end
   end
 
   def select
