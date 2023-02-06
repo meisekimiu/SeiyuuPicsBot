@@ -1,7 +1,9 @@
 # SeiyuuPicsBot
+**This project is now archived.**
+
 Seiyuu Pics Bot is an easily configurable ruby utility that lets you Tweet out random images. While they don't actually have to be pictures of your favorite seiyuu, this bot was initially created for seiyuu pics (kind of).
 
-This utility is still under active development. [Here](https://twitter.com/randy_rose_pics) is a (admittedly weird) bot that uses this utility.
+**This utility is no longer under active development.** [Here](https://twitter.com/randy_rose_pics) was a very weird bot that used this utility.
 
 ## Creating a new configuration file
 The repository comes with a `config.default.json` file that includes the basic layout of a configuration file. Create a copy of this file (preferably outside of the repository if you are doing development in this project!) and begin to edit the various JSON fields:
@@ -30,11 +32,11 @@ If everything is correctly set up, the bot should tweet a random image.
 To see all command line options, run `./seiyuupicsbot.rb --help`.
 
 ## Scheduling tweets regularly
-Currently this utility does not act as a daemon that tweets out regularly. *(It is an upcoming feature, though!)*
+This utility does not act as a daemon that tweets out regularly.
 
 As a result, you'll have to use an outside utility to run this utility on a schedule. On Linux and MacOS, `cron` is a very useful utility for scheduling purposes and is reccomended for use with this utility.
 
 ## Connecting the Twitter API
-To hook this bot up to a Twitter account correctly, you must create a [Twitter App](https://apps.twitter.com/) for your specific Twitter account.
+To hook this bot up to a Twitter account correctly, you must create a [Twitter App](https://apps.twitter.com/) for your specific Twitter account. **As of the archiving of this repository, Twitter is charging money for API access. So you'll probably have to pay $100 to do this.**
 
 After the app is created, generate access tokens for your account and you should be able to see the consumer key and secret as well as the access token and secret. These keys should be added to the appropriate spot in your bot's configuration file as seen from above.
